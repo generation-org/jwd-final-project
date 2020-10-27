@@ -15,7 +15,7 @@ In this step, we'll create the wireframes of your `TaskManager` application. Mak
 you start designing. Ask the instructor if you have any questions!
 
 > #### Useful Resources for this step
-> - [ECMAScript 2015 Classes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes)
+> - [beginners guide to wireframing](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
 
 
 > #### Test your Design!
