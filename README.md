@@ -17,4 +17,4 @@
 
 **Assessment Criteria**
 
-![alt text](https://github.com/generation-org/jwd-final-project/images/images/assesment-rubric.png)
+![](https://github.com/generation-org/jwd-final-project/blob/main/images/assesment-rubric.png)
