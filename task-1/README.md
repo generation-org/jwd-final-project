@@ -7,10 +7,13 @@ Is always a good practice to design first before start coding. The objective of 
 ## Walkthrough
 
 ### Step 1: 
-Create an account on https://moqups.com/
+Create an account on <a href="https://moqups.com/" target="_blank">Moqups</a>
 
 > #### Useful Resources for this step
-> - [beginners guide to wireframing](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
+> - <a href="https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-739" target="_blank">beginners guide to wireframing</a>
+
+[beginners guide to wireframing](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
+
 
 ### Step 2: The TaskManager Class
 
