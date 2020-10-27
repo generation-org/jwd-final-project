@@ -9,39 +9,25 @@ Is always a good practice to design first before start coding. The objective of 
 ### Step 1: 
 Create an account on <a href="https://moqups.com/" target="_blank">Moqups</a>
 
-> #### Useful Resources for this step
-> - <a href="https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-739" target="_blank">beginners guide to wireframing</a>
+### Step 2: Create your App Wireframes
 
-[beginners guide to wireframing](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
-
-
-### Step 2: The TaskManager Class
-
-In this step, we'll create a `TaskManager` class that
-will be responsible for managing the tasks in the application.
+In this step, we'll create the wireframes of your `TaskManager` application. Make sure you read the acceptance criteria on the **results** section before
+you start designing. Ask the instructor if you have any questions!
 
 > #### Useful Resources for this step
 > - [ECMAScript 2015 Classes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance#ECMAScript_2015_Classes)
 
-1. Create a `TaskManager` class in `js/taskManager.js`
-2. Within the `constructor` of the `TaskManager` class, initialize a `this.tasks` property on the class equal to an empty array.
 
-> #### Test Your Code!
-> Now is a good chance to test your code, head over to `js/index.js` and do the following
->
-> 1. Initialize a new instance of `TaskManager`
-> 2. `console.log()` the `tasks` property
->
+> #### Test your Design!
+> Navigate through your designs and validate that you meet the **assesment criteria**. 
+
 > **Expected Result**
-> You should see an empty array logged to the browser.
-
-### Step 3: Adding A New Task Programmatically
-
+> You should be able to navigate to all screens and fulfill the requirements.
 
 
 ## Results
 
-You should have implemented the different screens of your application, meeting the following acceptance criteria:
+You should have implemented the different screens of your application, meeting the following **assesment criteria**:
 
 * Contains a Task Form with the required information (Name, Description, AssignedTo, DueDate, Status)
 * Contains a Task Layout (check this Card Layout example) with the required information (Name, Description, AssignedTo, DueDate, Status)
