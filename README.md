@@ -1,4 +1,4 @@
-# Jr Web Developr Final Project - Task Planner
+# Jr Web Developer Final Project - Task Planner
 
 
 **General Objectives**
