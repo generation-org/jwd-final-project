@@ -35,4 +35,4 @@ You should have implemented the different screens of your application, meeting t
 
 ## Example
 
-![alt text](https://github.com/generation-org/jwd-final-project/blob/main/task-1/images/wireframes.png)
+![](https://github.com/generation-org/jwd-final-project/blob/main/task-1/images/wireframes.png)
