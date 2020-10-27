@@ -15,7 +15,7 @@ In this step, we'll create the wireframes of your `TaskManager` application. Mak
 you start designing. Ask the instructor if you have any questions!
 
 > #### Useful Resources for this step
-> - [beginners guide to wireframing](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
+> - <a href="https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399" target="_blank">beginners guide to wireframing</a>
 
 
 > #### Test your Design!
