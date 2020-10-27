@@ -1,2 +1,2 @@
-# jwd-final-project
-Instructions for the final project of Jr Web Developer
+# Jr Web Developr Final Project
+Instructions for the final project of Jr Web Developer program at Generation.org.
