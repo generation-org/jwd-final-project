@@ -14,7 +14,3 @@
 * Each Sprint will have a **demo** and a **retrospective** at the end following the Scrum methodology.
 * At the end of the project, you and your group will do a **final project presentation** to the entire class and potentially to a group of employers.
 
-
-**Assessment Criteria**
-
-![](https://github.com/generation-org/jwd-final-project/blob/main/images/assesment-rubric.png)
