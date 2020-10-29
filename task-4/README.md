@@ -19,7 +19,7 @@ Implement the Listing objects feature of the selected project:
 
 In this step, we'll add a div element where we can add the elements
 
-1. Add a new <div> to the `items.html` page where you can add a list of [Card layout](https://getbootstrap.com/docs/4.0/components/card/) that will represent your posts or products item. 
+1. Add a new div element to the `items.html` page where you can add a list of [Card layout](https://getbootstrap.com/docs/4.0/components/card/) that will represent your posts or products item. 
 2. Create a sample Card Layout that contains the information of your model(post or product)
 
 ### Step 2: Add JavaScript to your html page
