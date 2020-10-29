@@ -46,7 +46,7 @@ In this step, we'll create a basic HTML structure and include [Bootstrap](https:
 
 ### Step 4: Implementing your model form page
 
-1. Create a new file called `item.html` inside your project folder.
+1. Create a new file called `item_form.html` inside your project folder.
 2. Implement a basic form with the fields needed to create a new item(post or product)
 3. Add a Save button.
 
