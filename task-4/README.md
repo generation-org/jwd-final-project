@@ -33,9 +33,9 @@ In this step, we'll add a div element where we can add the elements
 
 ### Step 3: Implementing your JavaScript DOM interaction functions
 
-1. Implement the function `addItem(item)` -> adds a new card layout to the <div> where you display the list of items (product or post)
-2. Implement the function `removeItem(itemId)` -> removes the item from the div and the data structure if the item exists with the given ID
-3. Implement the function `clear()` -> removes all items from the <div> list and items data structure
+1. Implement the function `addItem(item)` -> adds a new card layout to the div element where you display the list of items (product or post)
+2. Implement the function `removeItem(itemId)` -> removes the item from the div element and the data structure if the item exists with the given ID
+3. Implement the function `clear()` -> removes all items from the div element list and items data structure
 4. Commit and push your changes to your project repository.
     
 > #### Useful Resources for this step
