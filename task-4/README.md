@@ -15,7 +15,7 @@ Implement a form that captures the fields required to create a task.
 
 ### Step 1: Add a task form
 
-In this step, we'll add a form to create a new task
+In this step, we'll add a form to create a new task.
 
 1. Add a new form inside the `index.html` page with all fields required to create a new task:
 * Name
@@ -51,8 +51,8 @@ In this step, we'll add a form to create a new task
 ### Step 3: Showing errors to users
 
 1. Add a [Bootstrap alert component](https://getbootstrap.com/docs/4.5/components/alerts/) inside your form to display the errors to the users.
-2. Add the logic to display or hide the error message when the form is submited
-3. Display a meaningful error when a form filed is invalid and the user clicks the submit button
+2. Add the logic to display or hide the error message when the form is submited.
+3. Display a meaningful error when a form filed is invalid and the user clicks the submit button.
 4. Add the logic to hide the error message when the user clicks the submit button and the form data is valid.
     
 > #### Useful Resources for this step
