@@ -1,5 +1,3 @@
-// Initialize a new TaskManager with currentId set to 0
-const taskManager = new TaskManager(0);
 
 // Select the New Task Form
 const newTaskForm = document.querySelector('#newTaskForm');
@@ -14,7 +12,9 @@ newTaskForm.addEventListener('submit', (event) => {
     const newTaskDescription = document.querySelector('#newTaskDescription');
     const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
     const newTaskDueDate = document.querySelector('#newTaskDueDate');
-
+    const errorMessage = document.querySelector('#alertMessage');
+    
+    
     /*
         Validation code here
     */
@@ -24,13 +24,15 @@ newTaskForm.addEventListener('submit', (event) => {
     const description = newTaskDescription.value;
     const assignedTo = newTaskAssignedTo.value;
     const dueDate = newTaskDueDate.value;
+    if(!validFormFieldInput(name)){
+        errorMessage.innerHTML = "Invalid name input";
+        errorMessage.style.display = "block"
+    }else{
+        errorMessage.style.display = "none"
+    }
 
-    // Add the task to the task manager
-    taskManager.addTask(name, description, assignedTo, dueDate);
-
-    // Clear the form
-    newTaskNameInput.value = '';
-    newTaskDescription.value = '';
-    newTaskAssignedTo.value = '';
-    newTaskDueDate.value = '';
 });
+
+function validFormFieldInput(data){
+    return data !== null && data !== '';
+}
