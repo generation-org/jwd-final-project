@@ -1,67 +1,73 @@
-# Task 9: Persisting Tasks to LocalStorage
+# Task 9: Deleting Tasks
 
 ## Description
 
-In this task, we'll _persist_ (ie: save) our tasks to LocalStorage, so that we can load them again the next time we visit our page.
+Now that we are persisting tasks to `localStorage`, we need a way to delete old tasks so that they don't fill up the list over time.
 
 ## Walkthrough
 
-### Step 1: Adding the save method to TaskManager
+### Step 1: Add A Delete Button to the Task HTML
 
 > #### Useful Resources for this step
-> - [Using the Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-> - [JSON.stringify()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify)
-> - [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
+> - [Bootstrap Buttons](https://getbootstrap.com/docs/4.5/components/buttons/)
 
-In this step, we'll add a `save()` method to our TaskManager, that we can call to save the current `this.tasks` to localStorage. We also need to save the `currentId` of the task we're working on, so that any new tasks after the application has loaded can continue off the `currentId`.
+In this step, we'll need to make sure we have a button on each of our tasks to delete the task.
 
-Because `localStorage` can only store strings, we need a way to convert our `this.tasks` array to a string, that can also be converted _back_ to an array when we load the tasks. For this, we'll be using [JSON.stringify](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify), which we can [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) later on to convert back to an array.
-
-Also, since our `currentId` is a number, we'll need to convert that to a string too.
-
-1. In `js/taskManager.js`, in the `TaskManager` class, create a `save` method. This method doesn't require any parameters.
-2. In the `save` method, create a JSON string of the tasks using `JSON.stringify()` and store it to a new variable, `tasksJson`.
-3. Store the JSON string in `localStorage` under the key `tasks` using `localStorage.setItem()`.
-4. Convert the `this.currentId` to a string and store it in a new variable, `currentId`.
-5. Store the `currentId` variable in `localStorage` under the key `currentId` using `localStorage.setItem()`.
-4. In `js/index.js`, after both adding a new task and updating a task's status to done, call `taskManager.save()` to save the tasks to `localSorage`.
+1. In `js/taskManager.js`, find the function `createTaskHtml`.
+2. In the returned HTML, add a `button` to delete the task, giving it a class `delete-button` that we will use later to check if the button was clicked.
 
 > #### Test Your Code!
 > Now is a good chance to test your code, follow the steps below:
 > 1. Open `index.html` in the browser and create a new task using the form.
-> 2. Open the developer tools and navigate to the `Application` tab.
-> 3. In the sidebar, under `Storage`, expand `Local Storage` and select `file://`
 >
 > **Expected Result**
-> You should see a key `tasks` with the stringified array of tasks as it's value, as well as a key `currentId` with the currentId as it's value.
-> ![Image of Expected Result](images/1.png)
+> You should see tasks you have created now have a "Delete" button.
 
-### Step 2: Adding the load method to TaskManager
+### Step 2: Create the deleteTask Method on TaskManager
 
 > #### Useful Resources for this step
-> - [Using the Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-> - [JSON.parse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)
+> - [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
-Now that we have saved our tasks to `localStorage`, we need a way to load them back into our `TaskManager` when we load the application. As well as loading our `currentId` back into our `TaskManager`.
+Now we'll need a way to delete the task. For this, we'll create a `deleteTask` method on our `TaskManager` class.
 
-For this, we'll be converting the array we _stringified_ with `JSON.stringify()` back to an array, using `JSON.parse()`, before storing them back into the `TaskManager`'s `this.tasks`.
+In this method, we'll be removing the task from the `this.tasks` array. Interestingly, there is no simple way to remove an element from an array. Instead, we can tackle this problem in one of two ways:
 
-We'll also be converting the `currentId` number we converted as a string, back to a number.
+- Use the `slice()` method to remove a section of the array
+- Create a new array **without** the elements we want removed included.
 
-1. In `js/taskManager.js`, add a new method called `load`. This method doesn't require any parameters.
-2. In the `load` method, check if any tasks are saved in localStorage with `localStorage.getItem()`.
-3. If any tasks are stored, get the JSON string of tasks stored in `localStorage` with `localStorage.getItem()`, making sure to pass the key we used to save the tasks, `tasks`. Store this string into a new variable, `tasksJson`.
-4. Convert the `tasksJson` string to an array using `JSON.parse()` and store it in `this.tasks`.
-5. Next, check if the `currentId` is saved in localStorage with `localStorage.getItem()`.
-6. If the `currentId` is stored, get the `currentId` in localStorage using `localStorage.getItem()` and store it in a new variable, `currentId`.
-7. Convert the currentId to a number before storing it to the `TaskManager`'s `this.currentId`
-8. In `js/index.js`, near the top of the file, after _instantiating_ `taskManager`, `load` the tasks with `taskManager.load()` and render them with `taskManager.render()`.
+For this step, we'll go with the second way. It's more _explicit_ and clear.
 
+1. In `js/taskManager.js`, create a `deleteTask` method on the `TaskManager` class. It should take one parameter, `taskId`, the id of the task we want deleted.
+2. In the `deleteTask` method, create an empty array and store it in a new variable, `newTasks`.
+3. Loop over the tasks, in the loop
+    - Get the current task in the loop, store it in a variable, `task`.
+    - Check if `task.id` is **not** equal to the `taskId` passed as a parameter.
+    - If the `task.id` is **not** equal to the `taskId`, push the `task` into the `newTasks` array.
+4. Set `this.tasks` to `newTasks`.
+
+### Step 3: Setting an EventListener to the Delete Button on Tasks
+
+> #### Useful Resources for this step
+> - [EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener)
+> - [Using Data Attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+
+Now we have our `deleteTask` method ready, we need to connect it to the delete buttons we created in Step 1.
+
+We'll be using the `delete-button` class we added to the buttons to find them. It's all very similar to the code we did for the "Mark As Done" button. After the deleting the task, remember to `taskManager.save()` and `taskManager.render()` the tasks!
+
+1. In `js/index.js`, find the `EventListener` for the `click` event on the `Tasks List` we created in Task 8.
+2. At the bottom of the function, after our code that handles the "Mark As Done" button, create a new `if` statement to check if the `event.target.classList` `contains` the class `'delete-button'`.
+3. If it does, get the `parentTask` and store it as a variable.
+4. Get the `taskId` of the parent task from its `data-task-id` property - **remember**, since it's stored as a string in a `data` attribute, we need to convert it to a number, just like we did for task 8!
+5. Delete the task, passing the `taskId` to `taskManager.deleteTask()`
+6. Save the tasks to `localStorage` using `taskManager.save()`
+7. Render the tasks using `taskManager.render()`.
+    
 ## Results
 
-Open up `index.html` and add a task. Now, when you re-visit the page (eg: close and open or refresh), you should see the previously created task loaded and rendered to the page! 
+Open up `index.html` and add a task. Find the task in the Task List and click the delete button. The task should now be deleted!
 
-Also, since we saved the `currentId`, any _new_ task we create should use the next `currentId`, after the one stored in `localStorage`.
+Refresh the page to make sure the new list with the task deleted is saved. When you refresh the page, you should _not_ see the deleted task in the list.
 
 ## Example
 

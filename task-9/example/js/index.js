@@ -1,9 +1,7 @@
 const taskManager = new TaskManager(0);
 
-// Load the tasks from localStorage
 taskManager.load();
 
-// Render the tasks to the page
 taskManager.render();
 
 const newTaskForm = document.querySelector('#newTaskForm');
@@ -27,7 +25,6 @@ newTaskForm.addEventListener('submit', (event) => {
 
     taskManager.addTask(name, description, assignedTo, dueDate);
 
-    // Save the tasks to localStorage
     taskManager.save();
 
     taskManager.render();
@@ -50,9 +47,26 @@ tasksList.addEventListener('click', (event) => {
 
         task.status = 'DONE';
 
+        taskManager.save();
+
+        taskManager.render();
+    }
+
+    // Check if a "Delete" button was clicked
+    if (event.target.classList.contains('delete-button')) {
+        // Get the parent Task
+        const parentTask = event.target.parentElement.parentElement;
+
+        // Get the taskId of the parent Task.
+        const taskId = Number(parentTask.dataset.taskId);
+
+        // Delete the task
+        taskManager.deleteTask(taskId);
+
         // Save the tasks to localStorage
         taskManager.save();
 
+        // Render the tasks
         taskManager.render();
     }
 });
