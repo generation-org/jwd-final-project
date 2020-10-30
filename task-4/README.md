@@ -1,10 +1,8 @@
-# Task 4: Listing Model Objects Front-End
+# Task 4: Task Form Inputs Validation
 
 ## Description
 
-Implement the Listing objects feature of the selected project:
-* Products Listing
-* Posts Listing
+Implement a form that captures the fields required to create a task.
 
 
 > #### Tools
@@ -15,11 +13,16 @@ Implement the Listing objects feature of the selected project:
     
 ## Walkthrough
 
-### Step 1: Add a container for your items list
+### Step 1: Add a task form
 
-In this step, we'll add a div element where we can add the elements
+In this step, we'll add a form to create a new task
 
-1. Add a new div element to the `items.html` page where you can add a list of [Card layout](https://getbootstrap.com/docs/4.0/components/card/) that will represent your posts or products item. 
+1. Add a new form inside the `index.html` page with all fields required to create a new task:
+* Name
+* Description
+* AssignedTo 
+* DueDate
+* Status
 2. Create a sample Card Layout that contains the information of your model(post or product)
 
 ### Step 2: Add JavaScript to your HTML page
