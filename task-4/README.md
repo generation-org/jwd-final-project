@@ -23,16 +23,21 @@ In this step, we'll add a form to create a new task
 * AssignedTo 
 * DueDate
 * Status
-2. Create a sample Card Layout that contains the information of your model(post or product)
 
-### Step 2: Add JavaScript to your HTML page
-
-1. Create a JavaScript file named `ModelController.js` and include it into your HTML page.
-2. Define a JSON representation of your Product or Posts object and create a list with 10 sample items.
-3. Define a data structure variable to store the items.
+2. Add a button to submit your form.
 
 > #### Useful Resources for this step
-> - [Basic Data Structures](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-data-structures/use-an-array-to-store-a-collection-of-data)
+> - [Forms](https://getbootstrap.com/docs/4.5/components/forms/)
+> - [Buttons](https://getbootstrap.com/docs/4.5/components/buttons/) 
+
+### Step 2: Implement a JavaScript function to validate your form fields
+
+1. Create a JavaScript file named `index.js` and include it into your `index.html` page.
+2. Implement a JavaScript function named `validateFormFields()`
+3. Add the code needed to retrieve the task form field values using the 
+
+> #### Useful Resources for this step
+> - [Forms](https://getbootstrap.com/docs/4.5/components/forms/)
 
 ### Step 3: Implementing your JavaScript DOM interaction functions
 
