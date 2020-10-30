@@ -39,24 +39,25 @@ In this step, we'll add a form to create a new task
 > #### Useful Resources for this step
 > - [Forms](https://getbootstrap.com/docs/4.5/components/forms/)
 
-### Step 3: Implementing your JavaScript DOM interaction functions
+### Step 3: Showing errors to users
 
-1. Implement the function `addItem(item)` -> adds a new card layout to the div element where you display the list of items (product or post)
-2. Implement the function `removeItem(itemId)` -> removes the item from the div element and the data structure if the item exists with the given ID
-3. Implement the function `clear()` -> removes all items from the div element list and items data structure
-4. Commit and push your changes to your project repository.
+1. Add a [Bootstrap alert component](https://getbootstrap.com/docs/4.5/components/alerts/) inside your form to display the errors to the users.
+2. Add the logic to display or hide the error message when the form is submited
+3. Display a meaningful error when a form filed is invalid and the user clicks the submit button
+4. Add the logic to hide the error message when the user clicks the submit button and the form data is valid.
     
 > #### Useful Resources for this step
-> - [HTML DOM Methods](https://www.w3schools.com/js/js_htmldom_methods.asp)
+> - [Bootstrap alert component](https://getbootstrap.com/docs/4.5/components/alerts/)
+> - [How TO - Toggle Hide and Show](https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp)
 
 
 > #### Test Your Code!
-> Now is a good chance to test your code, open your `items.html` page and verify that the items are loaded.
-> Once your `ModelController.js` is loaded you should be able to test your functions using the console.
+> Now is a good chance to test your code, open your `index.html` page and fill in wrong data on the form and check if the right error is shown.
+> Verify also that when the form fields are correct then no error message is displayed.
 
 ## Results
 
-We've now create a basic component that allows you to interact with the DOM and add items programmatically to a list.
+We've now create your task form with the JavaScript validations to make sure the user submits correct data!
 
 ## Example
 
