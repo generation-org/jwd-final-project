@@ -2,7 +2,11 @@
 
 ## Description
 
-Implement the card layout bootstrap component that represents a task.
+Implement the card layout bootstrap component that contains the task information:
+* Name
+* Description
+* AssignedTo 
+* DueDate
 
 > #### Tools
 > - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
@@ -11,65 +15,33 @@ Implement the card layout bootstrap component that represents a task.
     
 ## Walkthrough
 
-### Step 1: Implement the home page
+### Step 1: Implement the task Card layout
 
-In this step, we'll create a basic HTML structure and include [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+In this step, we'll create a basic structure of a card with the task's information
 
-1. Create a new file called `index.html` inside your project folder.
-2. Include your `styles.css` file inside the `index.html` page.
-3. Add a short description, image, video or any other element you like to explain what your project does.
-4. Add your new files to the Github repo, commit and push your changes.
+1. Add a new sample [card](https://getbootstrap.com/docs/4.5/components/card/) to the `index.html`
+2. Add field inside the card for the task name.
+3. Add field inside the card for the task description.
+4. Add field inside the card for the task assigned to.
+5. Add field inside the card for the task due date.
 
-### Step 2: Implementing your Items List page
+### Step 2: Implementing a tasks list
 
-1. Create a new file depending on the project you are implementing: 
-    * `products.html`
-    * `posts.html`
-2. Include your `styles.css` file inside your html page.
-3. Create a sample list with some sample data to see how your items list will look like
+1. Add a [list group](https://getbootstrap.com/docs/4.5/components/list-group/) to the `index.html`
+2. Add your sample task card inside the list
 
-> #### Useful Resources for this step
-> - [List group](https://getbootstrap.com/docs/4.5/components/list-group/)
-> - [Cards](https://getbootstrap.com/docs/4.5/components/card/)
+### Step 3: Adding your sample data
 
-### Step 3: Implementing your Login page
-
-1. Create a new file called `login.html` inside your project folder.
-2. Implement a basic login form.
-3. Add a Login button.
-
-> #### Useful Resources for this step
-> - [Forms](https://getbootstrap.com/docs/4.5/components/forms/)
-
-### Step 4: Implementing your model form page
-
-1. Create a new file called `item_form.html` inside your project folder.
-2. Implement a basic form with the fields needed to create a new item(post or product)
-3. Add a Save button.
-
-> #### Useful Resources for this step
-> - [Forms](https://getbootstrap.com/docs/4.5/components/forms/)
-
-### Step 5: Adding a Navigation Bar
-
-1. Understand how the [Navbar](https://getbootstrap.com/docs/4.5/components/navbar/) works.
-2. Add a Navbar with the menu options for each page
-    * Home
-    * About Us
-    * Items List
-    * Model Form
-3. Add a link to each menu item so it redirects to expected html page.
-
-> #### Useful Resources for this step
-> - [Navbar](https://getbootstrap.com/docs/4.5/components/navbar/)
-
+1. Create 5 different task examples
+2. Add your 5 cards inside the list group created on the step 2.
 
 > #### Test Your Code!
-> Now is a good chance to test your page, open your `index.html` on your favorite browser and verify that the navigation works to all the pages.
+> Now is a good chance to test your page, open your `index.html` on your favorite browser and verify that the tasks list is displayed correctly.
+
 
 ## Results
 
-We've now create the basic html pages of your project using Bootstrap!
+We've now create the basic structure to represent a task and the list to group them.
 
 ## Example
 
