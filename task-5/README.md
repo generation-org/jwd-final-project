@@ -1,8 +1,8 @@
-# Task 6: Adding Tasks
+# Task 5: Create the Tasks Model using JavaScript
 
 ## Description
 
-For this task, we'll be creating a class to manage the tasks, adding a method to the class to keep track of tasks in our application, and connecting up the **New Task** form to create tasks.
+Implement a JavaScript class that represents a task using a JavaScript object.
 
 ## Walkthrough
 
