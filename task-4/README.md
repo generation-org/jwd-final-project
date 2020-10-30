@@ -34,8 +34,15 @@ In this step, we'll add a form to create a new task
 
 1. Create a JavaScript file named `index.js` and include it into your `index.html` page.
 2. Implement a JavaScript function named `validateFormFields()`
-3. Add the code needed to retrieve the task form field values using the 
-
+3. Add an ID attribute to each form field and implement the code needed to retrieve the each form field value using the following method:
+      ```javascript
+       const newTaskNameInput = document.querySelector('#newTaskNameInput');
+      ```
+4. Log your field inputs to verify that you are getting the data you need to validate.
+      ```javascript
+       const newTaskNameInput = document.querySelector('#newTaskNameInput');
+       console.log("newTaskNameInput:  "+newTaskNameInput);
+      ```
 > #### Useful Resources for this step
 > - [Forms](https://getbootstrap.com/docs/4.5/components/forms/)
 
