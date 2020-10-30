@@ -33,7 +33,7 @@ In this step, we'll add a form to create a new task.
 ### Step 2: Implement a JavaScript function to validate your form fields
 
 1. Create a JavaScript file named `index.js` and include it into your `index.html` page.
-2. Implement a JavaScript function named `validFormField(data)`
+2. Implement a JavaScript function named `validFormFieldInput(data)`
 3. Add an ID attribute to each form field and implement the code needed to retrieve the each form field value using the following method:
       ```javascript
        const newTaskNameInput = document.querySelector('#newTaskNameInput');
