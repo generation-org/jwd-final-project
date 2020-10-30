@@ -2,18 +2,18 @@
 
 ## Description
 
-Implement a JavaScript class that represents a task using a JavaScript object.
+Implement a JavaScript class that represents a task using JavaScript object notation(JSON).
 
 ## Walkthrough
 
-### Step 1: The Setup
+### Step 1: Define your object structure
 
-In this step, we'll re-organise our folder structure in preparation for the next few steps.
+In this step, we'll define the task structure using JSON.
 
 1. Create a `js` folder in your project if one does not already exist
 2. Copy the existing js file into your `js` folder, and rename it to `index.js`
 3. Update the `<script>` tag in your `html` file to use the new location of the `js/index.js` file.
-4.  Create a `taskManager.js` file in the `js` folder
+4. Create a `taskManager.js` file in the `js` folder
 5. Add a `<script>` tag pointing to the `js/taskManager.js` file _before_ the `<script>` tag pointing to the `js/index.js` file.
 
 ### Step 2: The TaskManager Class
