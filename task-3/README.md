@@ -1,11 +1,8 @@
-# Task 3: Basic Structure - Front-End with Bootstrap
+# Task 3: Create a Task Card layout and a Task List component
 
 ## Description
 
-Create the basic structure for the project with the navigation working:
-* Application views on separate HTML pages
-* Create a repository for your Front-End code (HTML + CSS + JavaScript )
-
+Implement the card layout bootstrap component that represents a task.
 
 > #### Tools
 > - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
