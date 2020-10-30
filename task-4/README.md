@@ -45,7 +45,7 @@ In this step, we'll add a form to create a new task
       ```
 > #### Useful Resources for this step
 > - [Forms](https://getbootstrap.com/docs/4.5/components/forms/)
-> - [Forms](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
+> - [Query selector documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 
 
 ### Step 3: Showing errors to users
