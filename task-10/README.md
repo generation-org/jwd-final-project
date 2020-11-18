@@ -37,7 +37,8 @@ In this step, we'll test some of the methods that exist on our `TaskManager` cla
 
 > #### Test Your Code!
 > Now is a good chance to test your code:
-> 1.Run your tests with `npm test`.
+
+> 1. Run your tests with `npm test`.
 >
 > **Expected Result**
 > You should see the tests all pass, green! 
