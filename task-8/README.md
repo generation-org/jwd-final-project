@@ -64,6 +64,8 @@ Open up `index.html` and add a task. Now, when you re-visit the page (eg: close 
 
 Also, since we saved the `currentId`, any _new_ task we create should use the next `currentId`, after the one stored in `localStorage`.
 
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder
