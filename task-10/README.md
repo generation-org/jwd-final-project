@@ -61,6 +61,8 @@ Make sure to adjust any examples you reference to fit your code.
 
 Run your test and make sure they all passed!
 
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+
 ## Example
 
 Stuck? Check out the provided example in the [Mocha Github example](https://github.com/mochajs/mocha-examples)
