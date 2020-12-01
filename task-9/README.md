@@ -69,6 +69,8 @@ Open up `index.html` and add a task. Find the task in the Task List and click th
 
 Refresh the page to make sure the new list with the task deleted is saved. When you refresh the page, you should _not_ see the deleted task in the list.
 
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder
