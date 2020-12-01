@@ -190,6 +190,8 @@ Check out [example/js/taskManager.js](example/js/taskManager.js) for a completed
 
 Open up `index.html` and add a task. Now we should we able to click the "Mark As Done" button below each task, to change the status from "TODO" to "DONE".
 
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder
