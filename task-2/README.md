@@ -18,7 +18,7 @@ Create a private GitHub repository that is shared among your groupmates and your
 
 ### Step 1: Create the page structure
 
-In this step, we'll create a basic HTML structure and include [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+In this step, we'll create a basic HTML structure and include [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/).
 
 1. Create a new file called `index.html` inside your project folder.
 2. Create a new file called `styles.css` and put this file inside a folder called `css`inside your project folder.
@@ -43,13 +43,13 @@ to your wireframes structure created on Task 1.
 
 
 > #### Test Your Code!
-> Now is a good chance to test your page, open your `index.html` on your favorite browser and verify it looks and works as expected
+> Now is a good chance to test your page, open your `index.html` on your favorite browser and verify it looks and works as expected.
 
 ## Results
 
-We've now set up the `index.html` page, created with Bootstrap! Your project should meet the following assesment criteria:
-* Task Form fields are displayed in an organized way and with the proper label.
-* All input fields are mapped in the Task Form (Name, Description, AssignedTo, DueDate, Status).
+We've now set up the `index.html` page, created with Bootstrap! 
+
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
 
 ## Example
 
