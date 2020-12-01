@@ -124,14 +124,8 @@ Now that the `TaskManager` class has a `render()` method, we need to make sure t
 
 Go ahead and open `index.html` in the browser and add some tasks using the form. You should see each new task populate the task list!
 
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder
-
-
-
-
-
-
-
-
