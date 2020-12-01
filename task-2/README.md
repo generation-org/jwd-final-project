@@ -2,7 +2,8 @@
 
 ## Description
 
-Implement the basic HTML structure of your Wireframes design.
+* Implement the basic HTML structure of your Wireframes design.
+* Create a private Github repository for your project that is shared with your instructor.
 
 > #### Tools
 > - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
