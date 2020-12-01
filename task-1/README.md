@@ -29,9 +29,9 @@ you start designing. Ask the instructor if you have any questions!
 
 You should have implemented the different screens of your application, meeting the following **assesment criteria**:
 
-* Contains a Task Form with the required information (Name, Description, AssignedTo, DueDate, Status)
-* Contains a Task Layout (check this Card Layout example) with the required information (Name, Description, AssignedTo, DueDate, Status)
-* Wireframe solves all the UI challenges to represent the Task Planner and a clear view of a Task with the required fields(Name, Description, AssignedTo, DueDate, Stat
+* Contains a Task Form with the required information (Name, Description, AssignedTo, DueDate, Status).
+* Contains a Task Layout with the required information (Name, Description, AssignedTo, DueDate, Status).
+* Wireframe solves all the UI challenges to represent the Task Planner and a clear view of a Task with the required fields (Name, Description, AssignedTo, DueDate, Status).
 
 ## Example
 
