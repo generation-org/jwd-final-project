@@ -48,9 +48,8 @@ to your wireframes structure created on Task 1.
 ## Results
 
 We've now set up the `index.html` page, created with Bootstrap! Your project should meet the following assesment criteria:
-*Task Form fields are displayed in an organized way and with the proper label.
-*All input fields are mapped in the Task Form (Name, Description, AssignedTo, DueDate, Status).
-*A Select type is used for the different Status options (TODO, IN PROGRESS, REVIEW, DONE).
+* Task Form fields are displayed in an organized way and with the proper label.
+* All input fields are mapped in the Task Form (Name, Description, AssignedTo, DueDate, Status).
 
 ## Example
 
