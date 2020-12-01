@@ -27,11 +27,9 @@ you start designing. Ask the instructor if you have any questions!
 
 ## Results
 
-You should have implemented the different screens of your application, meeting the following **assesment criteria**:
+You should have implemented the different screens of your application.
 
-* Contains a Task Form with the required information (Name, Description, AssignedTo, DueDate, Status).
-* Contains a Task Layout with the required information (Name, Description, AssignedTo, DueDate, Status).
-* Wireframe solves all the UI challenges to represent the Task Planner and a clear view of a Task with the required fields (Name, Description, AssignedTo, DueDate, Status).
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
 
 ## Example
 
