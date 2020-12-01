@@ -70,6 +70,8 @@ In this step, we'll add a form to create a new task.
 
 We've now create your task form with the JavaScript validations to make sure the user submits correct data!
 
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder!
