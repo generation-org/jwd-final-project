@@ -114,6 +114,8 @@ We've now set up the `TaskManager` class, created an `addTask` and hooked it up 
 
 Test out your code by adding some tasks using the **New Task** form, and checking the `TaskManager` instance's `tasks` array for the tasks.
 
+Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder!
