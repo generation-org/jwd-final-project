@@ -116,7 +116,7 @@ We can mostly rely on the data stored for each task in the `TaskManager`'s `task
 
 Now that the `TaskManager` class has a `render()` method, we need to make sure to call it each time a new task is added, so that it is _rendered_ to the page!
 
-1. In `js/index.js`, in the event listener for the `submit` even on the **New Task** form, find the call to the `TaskManager`'s `addTask`.
+1. In `js/index.js`, in the event listener for the `submit` event on the **New Task** form, find the call to the `TaskManager`'s `addTask`.
 
 2. After `addTask` is called, call the `TaskManager`'s `render` method.
 
