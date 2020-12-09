@@ -77,6 +77,7 @@ Notice how each task has a unique `id`? We will be using this `id` in future ste
     - `description`
     - `assignedTo`
     - `dueDate`
+    - `status`
 4. Within the `addTask` method, increment the `this.currentId`
 5. `push` a new task into the `this.tasks` array, with the correct properties of the task, using the values passed in as parameters as well as the new `this.currentId`
     **Note** Make sure to include the `id` and a default `status` of `'TODO'`
