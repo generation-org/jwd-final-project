@@ -95,7 +95,7 @@ We can mostly rely on the data stored for each task in the `TaskManager`'s `task
 
     3. Create a `formattedDate` variable, storing a readable `string` representing the date, using methods of the `date` we just created. 
 
-        **Hint**: Use MDN's [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) reference to see what methods are available to format a date. Build a string using string concatenation or template literals. Check the [example/taskManager.js](example/taskManager.js) to see how it can be done if you get stuck.
+        **Hint**: Use MDN's [Date](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) reference to see what methods are available to format a date. Build a string using string concatenation or template literals. Check the [example/taskManager.js](example/js/taskManager.js) to see how it can be done if you get stuck.
     
     4. Create a `taskHtml` variable to store the HTML of the current task, by calling the `createTaskHtml` function and using the properties of the current task, as well as the new `formattedDate` variable for the parameters.
 
