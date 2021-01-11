@@ -43,6 +43,7 @@ In this step, we'll test some of the methods that exist on our `TaskManager` cla
 >  **Expected Result**
 >  You should see the tests all pass, green! 
 
+[comment]: <> (
 ### Step 3: Testing TaskManager Methods - CHALLENGE (OPTIONAL)
 
 > #### Useful Resources for this step
@@ -66,3 +67,4 @@ Your task should meet the assesment criteria in the **Final Project - Scorecard 
 ## Example
 
 Stuck? Check out the provided example in the [Mocha Github example](https://github.com/mochajs/mocha-examples)
+)
