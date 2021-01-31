@@ -11,7 +11,7 @@ Now that we are persisting tasks to `localStorage`, we need a way to delete old 
 > #### Useful Resources for this step
 > - [Bootstrap Buttons](https://getbootstrap.com/docs/4.5/components/buttons/)
 
-In this step, we'll need to make sure we have a button on each of our tasks to delete the task.
+If you haven't already, we'll need to make sure we have a button on each of our tasks to delete the task.
 
 1. In `js/taskManager.js`, find the function `createTaskHtml`.
 2. In the returned HTML, add a `button` to delete the task, giving it a class `delete-button` that we will use later to check if the button was clicked.
@@ -37,13 +37,15 @@ In this method, we'll be removing the task from the `this.tasks` array. Interest
 
 For this step, we'll go with the second way. It's more _explicit_ and clear.
 
-1. In `js/taskManager.js`, create a `deleteTask` method on the `TaskManager` class. It should take one parameter, `taskId`, the id of the task we want deleted.
-2. In the `deleteTask` method, create an empty array and store it in a new variable, `newTasks`.
-3. Loop over the tasks, in the loop
-    - Get the current task in the loop, store it in a variable, `task`.
+1. In `js/taskManager.js`, create a `deleteTask` method on the `TaskManager` class. It should take one parameter, `taskId`, the id of the task we want to be deleted.
+2. In the `deleteTask` method, create a new variable `newTasks` and set it to an empty array.
+3. Loop over the tasks, and for each iteration:
+    - Get the current task in the loop, store it in a variable `task`.
     - Check if `task.id` is **not** equal to the `taskId` passed as a parameter.
     - If the `task.id` is **not** equal to the `taskId`, push the `task` into the `newTasks` array.
 4. Set `this.tasks` to `newTasks`.
+
+For each iteration, we make sure that each task being added back into the `this.tasks` array is **not** the task that was deleted. 
 
 ### Step 3: Setting an EventListener to the Delete Button on Tasks
 
@@ -53,10 +55,10 @@ For this step, we'll go with the second way. It's more _explicit_ and clear.
 
 Now we have our `deleteTask` method ready, we need to connect it to the delete buttons we created in Step 1.
 
-We'll be using the `delete-button` class we added to the buttons to find them. It's all very similar to the code we did for the "Mark As Done" button. After the deleting the task, remember to `taskManager.save()` and `taskManager.render()` the tasks!
+We'll be using the `delete-button` class we added to the buttons to find them. It's all very similar to the code we did for the "Done" button. After deleting the task, remember to `taskManager.save()` and `taskManager.render()` the tasks!
 
 1. In `js/index.js`, find the `EventListener` for the `click` event on the `Tasks List` we created in Task 8.
-2. At the bottom of the function, after our code that handles the "Mark As Done" button, create a new `if` statement to check if the `event.target.classList` `contains` the class `'delete-button'`.
+2. At the bottom of the function, after our code that handles the "Done" button, create a new `if` statement to check if the `event.target.classList` `contains` the class `'delete-button'`.
 3. If it does, get the `parentTask` and store it as a variable.
 4. Get the `taskId` of the parent task from its `data-task-id` property - **remember**, since it's stored as a string in a `data` attribute, we need to convert it to a number, just like we did for task 8!
 5. Delete the task, passing the `taskId` to `taskManager.deleteTask()`
@@ -69,8 +71,10 @@ Open up `index.html` and add a task. Find the task in the Task List and click th
 
 Refresh the page to make sure the new list with the task deleted is saved. When you refresh the page, you should _not_ see the deleted task in the list.
 
-Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
-
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder
+
+## Assessment
+
+This will be assessed as part of [Sprint 3](https://docs.google.com/spreadsheets/d/1X-LhsK5TaDvQZl-YS6XFxemVx3UhHdAY-vRcdR-rt9Q/edit#gid=1124211828) 

@@ -28,7 +28,7 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
 };
 
 // Create the TaskManager class
-class TaskManager {
+module.exports = class TaskManager {
   constructor(currentId = 0) {
     this.tasks = [];
     this.currentId = currentId;
@@ -153,3 +153,4 @@ class TaskManager {
     this.tasks = newTasks;
   }
 }
+

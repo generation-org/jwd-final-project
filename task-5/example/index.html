@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col">
                 <h2>New Task</h2>
-                <form id="newTaskForm">
+                <form id="new-task-form">
                     <div class="form-group">
                         <label for="newTaskNameInput">Name</label>
                         <input type="text" class="form-control" id="newTaskNameInput">
@@ -43,7 +43,12 @@
             </div>
         </div>
     </div>
-
+    <div class="task-list-container">
+      <h3 class="text-center">Tasks:</h3>
+      <div class="d-flex justify-content-center">
+        <ul class="list-group" id="task-list"></ul>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>
@@ -54,7 +59,7 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-    <script src="js/TaskManager.js"></script>
+    <script src="js/taskManager.js"></script>
     <script src="js/index.js"></script>
 </body>
 

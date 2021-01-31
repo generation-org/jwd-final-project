@@ -14,70 +14,136 @@
 </head>
 
 <body>
-
-
-    <div class="jumbotron">
-        <h1 class="display-4">My Tasks</h1>
-        <div id="list-items">
-            <div class="card" style="width: 18rem;">                
-                <div class="card-body">
-                    <h5 class="card-title">Task 1</h5>
-                    <p class="card-text">task 1 description</p>
-                    <p class="card-text">Santiago Carrillo</p>
-                    <p class="card-text">Due Date: Aug 20 - 2020</p>
-                    <span class="badge badge-primary">IN PROGRESS</span>
-                    <a href="#" class="btn btn-primary">Delete</a>
+<div class="task-list-container">
+      <h3 class="text-center">Tasks:</h3>
+      <div class="d-flex justify-content-center">
+        <ul class="list-group" id="task-list">
+          <li class="card" style="min-width: 50vw">
+            <div class="card-body">
+              <h5 class="card-title">Name</h5>
+              <p class="card-text">
+                Some quick example text for a description.
+              </p>
+              <p class="card-text">Assigned To</p>
+              <p class="card-text">Due Date</p>
+              <div class="card-footer row">
+                <div class="col-6">
+                  <p class="card-text"><b>Task Status</b></p>
                 </div>
-            </div>
-            <br />
-            <div class="card" style="width: 18rem;">                
-                <div class="card-body">
-                    <h5 class="card-title">Task 2</h5>
-                    <p class="card-text">task 2 description</p>
-                    <p class="card-text">Santiago Carrillo</p>
-                    <p class="card-text">Due Date: Sep 20 - 2020</p>
-                    <span class="badge badge-success">DONE</span>
-                    <a href="#" class="btn btn-primary">Delete</a>
+                <div class="col-3">
+                  <button id="done-button" class="btn btn-outline-success">
+                    Done
+                  </button>
                 </div>
-            </div>
-            <br />
-            <div class="card" style="width: 18rem;">                
-                <div class="card-body">
-                    <h5 class="card-title">Task 3</h5>
-                    <p class="card-text">task 3 description</p>
-                    <p class="card-text">Santiago Carrillo</p>
-                    <p class="card-text">Due Date: Feb 20 - 2021</p>
-                    <span class="badge badge-warning">PENDING</span>
-                    <a href="#" class="btn btn-primary">Delete</a>
+                <div class="col-3">
+                  <button id="delete-button" class="btn btn-outline-danger">
+                    Delete
+                  </button>
                 </div>
+              </div>
             </div>
-            <br />
-            <div class="card" style="width: 18rem;">                
-                <div class="card-body">
-                    <h5 class="card-title">Task 4</h5>
-                    <p class="card-text">task 4 description</p>
-                    <p class="card-text">Santiago Carrillo</p>
-                    <p class="card-text">Due Date: Aug 20 - 2020</p>
-                    <span class="badge badge-success">DONE</span>
-                    <a href="#" class="btn btn-primary">Delete</a>
+          </li>
+          <li class="card" style="min-width: 50vw">
+            <div class="card-body">
+              <h5 class="card-title">Return the bottles</h5>
+              <p class="card-text">
+                Take the glass bottles to the refund machine.
+              </p>
+              <p class="card-text">Aaron Byrom</p>
+              <p class="card-text">25/11/2020</p>
+              <div class="card-footer row">
+                <div class="col-6">
+                  <p class="card-text"><b>In Progress</b></p>
                 </div>
-            </div>
-            <br />
-            <div class="card" style="width: 18rem;">                
-                <div class="card-body">
-                    <h5 class="card-title">Task 5</h5>
-                    <p class="card-text">task 5 description</p>
-                    <p class="card-text">Santiago Carrillo</p>
-                    <p class="card-text">Due Date: Oct 15 - 2020</p>
-                    <span class="badge badge-primary">IN PROGRESS</span>
-                    <a href="#" class="btn btn-primary">Delete</a>
+                <div class="col-3">
+                  <button id="done-button" class="btn btn-outline-success">
+                    Done
+                  </button>
                 </div>
+                <div class="col-3">
+                  <button id="delete-button" class="btn btn-outline-danger">
+                    Delete
+                  </button>
+                </div>
+              </div>
             </div>
-            <br />
-        </div>
+          </li>
+          <li class="card" style="min-width: 50vw">
+            <div class="card-body">
+              <h5 class="card-title">Meal Prep</h5>
+              <p class="card-text">Make some lunches to prepare for my week.</p>
+              <p class="card-text">Aaron Byrom</p>
+              <p class="card-text">22/11/2020</p>
+              <div class="card-footer row">
+                <div class="col-6">
+                  <p class="card-text"><b>In Progress</b></p>
+                </div>
+                <div class="col-3">
+                  <button id="done-button" class="btn btn-outline-success">
+                    Done
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button id="delete-button" class="btn btn-outline-danger">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="card" style="min-width: 50vw">
+            <div class="card-body">
+              <h5 class="card-title">Collect Eggs</h5>
+              <p class="card-text">
+                Collect the fresh eggs from the chicken pen.
+              </p>
+              <p class="card-text">Robin Klaus</p>
+              <p class="card-text">30/11/2020</p>
+              <div class="card-footer row">
+                <div class="col-6">
+                  <p class="card-text"><b>In Progress</b></p>
+                </div>
+                <div class="col-3">
+                  <button id="done-button" class="btn btn-outline-success">
+                    Done
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button id="delete-button" class="btn btn-outline-danger">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="card" style="min-width: 50vw">
+            <div class="card-body">
+              <h5 class="card-title">Optimise Shortest Path</h5>
+              <p class="card-text">
+                Continue my work on the shortest path algorithm.
+              </p>
+              <p class="card-text">Bhaumik Mehta</p>
+              <p class="card-text">01/01/2021</p>
+              <div class="card-footer row">
+                <div class="col-6">
+                  <p class="card-text"><b>In Progress</b></p>
+                </div>
+                <div class="col-3">
+                  <button id="done-button" class="btn btn-outline-success">
+                    Done
+                  </button>
+                </div>
+                <div class="col-3">
+                  <button id="delete-button" class="btn btn-outline-danger">
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
-
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
         crossorigin="anonymous"></script>

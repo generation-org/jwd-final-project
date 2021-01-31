@@ -2,27 +2,25 @@
 
 ## Description
 
-For this task, we'll write the code to update a task's status to "DONE" once a "Mark As Done" button on the task is clicked.
-
-Note, for this task, we are _not_ using the "Update Task" form. This is part of the re-structuring of the project. This step will be added as a **stretch goal** to the end of the course.
+For this task, we'll write the code to update a task's status to "Done" once a "Done" button on the task is clicked.
 
 ## Walkthrough
 
-### Step 1: Adding the "Mark As Done" button
+### Step 1: Adding the "Done" button
 
 > #### Useful Resources for this step
 > - [Bootstrap - Buttons](https://getbootstrap.com/docs/4.5/components/buttons/)
 
-In this step, we'll add a "Mark As Done" button to the tasks, so that a user can click the button to mark that specific task as done.
+In this step, we'll add a "Done" button to the tasks, so that a user can click the button to mark that specific task as done.
 
-1. In `js/taskManager.js`, within the `createTaskHtml` function, add a button to the task html to mark the task as done.
-2. Add a 'done-button' class to the "Mark As Done" button. We'll use this later to check if the button has been clicked.
+1. If you don't already have a "Done" button, then in `js/taskManager.js`, within the `createTaskHtml` function, add a button to the task html to mark the task as done.
+2. Add a 'done-button' class to the "Done" button. We'll use this later to check if the button has been clicked.
 
 > #### Test Your Code!
 > Now is a good chance to test your code, open `index.html` in the browser and create a new task using the form.
 >
 > **Expected Result**
-> You should see your tasks now have a "Mark As Done" button.
+> You should see your tasks now have a "Done" button.
 
 ### Step 2: Adding an Event Listener to the Task List
 
@@ -36,11 +34,11 @@ In this step, we'll add a "Mark As Done" button to the tasks, so that a user can
 
 In this step, we'll add an Event Listener to our **Task List**, so that we can check if one of our Task's buttons is clicked.
 
-Note that we're not adding an Event Listener to the "Mark As Done" buttons, this is because instead of adding Event Listener's to each "Mark As Done" button, we can add a singular Event Listener to the **Task List** and use [DOM Traversal](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model) to find the Task that was clicked. **DOM Traversal** is the act of using code to _traverse_ up and down the **DOM Tree** to find a specific **DOM Element**.
+Note that we're not adding an Event Listener to the "Done" buttons, this is because instead of adding Event Listener's to each "Done" button, we can add a singular Event Listener to the **Task List** and use [DOM Traversal](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model) to find which Task was clicked. **DOM Traversal** is the act of using code to _traverse_ up and down the **DOM Tree** to find a specific **DOM Element**.
 
-This way, we can avoid having to add Event Listeners to each and every "Mark As Done" button on the page.
+This way, we can avoid having to add Event Listeners to each and every "Done" button on the page.
 
-1. Make sure the **Task List** in `index.html` has an id you can use to select it, I went with `tasksList`.
+1. Make sure the **Task List** in `index.html` has an id you can use to select it, I went with `task-list`.
 
 2. In `js/index.js`, at the bottom of the file, use `querySelector` to select the **Task List** and store it in a variable.
 
@@ -55,9 +53,9 @@ This way, we can avoid having to add Event Listeners to each and every "Mark As 
     });
     ```
 
-5. Using the `event.target`, using an `if` statement, check if the `target`'s `classList` contains the class we added to the button, `'done-button'`. If the `classList` contains `'done-button'`, we know we clicked on the "Mark As Done" button from earlier!
+5. Using the `event.target`, using an `if` statement, check if the `target`'s `classList` contains the class we added to the button, `'done-button'`. If the `classList` contains `'done-button'`, we know we clicked on the "Done" button from earlier!
 
-6. Use [DOM Traversal](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model), such as the `parentElement` property of the `target` ([Node.parentElement](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement)) to _traverse_ the DOM and find the task's element. (Eg, it's `<li>`). Store the `<li>` in a `parentTask` variable.
+6. Use [DOM Traversal](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#The_document_object_model), such as the `parentElement` property of the `target` ([Node.parentElement](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement)) to _traverse_ the DOM and find the task's element. (we want to find `<li>`). Store the `<li>` in a `parentTask` variable.
 
     **Note**: This one is tricky! Head over to the [example/js/index.js](example/js/index.js) file to see how I did it.
 
@@ -66,7 +64,7 @@ This way, we can avoid having to add Event Listeners to each and every "Mark As 
 > 1. Directly after the code that traverses the DOM to find the `parentTask`, `console.log()` the `parentTask`.
 > 2. Open `index.html` in the browser.
 > 3. Create a new task with the form.
-> 4. Click the "Mark As Done" button on the newly created task.
+> 4. Click the "Done" button on the newly created task.
 >
 > **Expected Result**
 > In the browser console, you should see the Task's element logged.
@@ -77,7 +75,7 @@ This way, we can avoid having to add Event Listeners to each and every "Mark As 
 > - [Using Data Attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 > - [Template literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 
-In order to find the correct Task we want to update, we need a way to find which `TaskManager`'s `Task`'s "Mark As Done" button we clicked on the page. To do this, we'll be using our unique `id` we set for each task in the previous project steps.
+In order to find the correct Task we want to update, we need a way to find which `TaskManager`'s `Task`'s "Done" button we clicked on the page. To do this, we'll be using our unique `id` we set for each task in the previous project steps.
 
 Before we do however, we'll need to make sure we add this `id` to the HTML of each `task`, so that we can later retrieve the `id` and use it to look up which `task` we clicked.
 
@@ -85,7 +83,7 @@ Before we do however, we'll need to make sure we add this `id` to the HTML of ea
 
 2. Add a new parameter to the function, `id`.
 
-3. Within the HTML of the task, use a placeholder (`${}`) in the template literal to add the `id` as the value of a `data-task-id` attribute of the surrounding `task` element - Either the `<li>` or the `<div>`, depending on which one your group used.
+3. Within the HTML of the task, use a placeholder (`${}`) in the template literal to add the `id` as the value of a `data-task-id` attribute in the `<li>` 
 
     **Note** Check the [Using Data Attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) resource to see how this is done!
 
@@ -132,13 +130,13 @@ Now that we have our task `id` in our HTML, we need a way to use the `id` to fin
 > **Expected Result**
 > In the browser console, you should see an object representing the task with an `id` of `0`.
 
-### Step 5: Update the status of the selected Task to 'DONE'
+### Step 5: Update the status of the selected Task to 'Done'
 
 > #### Useful Resources for this step
 > - [Using Data Attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 > - [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)
 
-Now that we have the code in place that adds each `task.id` to the DOM, as well as a method `getTaskById` to retrieve the right ask from our `TaskManager`, we can combine the two to update the `task.status` to `'DONE'` once the "Mark As Done" button is clicked.
+Now that we have the code in place that adds each `task.id` to the DOM, as well as a method `getTaskById` to retrieve the right task from our `TaskManager`, we can combine the two and update the `task.status` to `'Done'` once the "Done" button is clicked.
 
 1. In `js/index.js`, find the Event Listener for the **Task List** `click` event we created in **Step 2**.
 
@@ -148,28 +146,28 @@ Now that we have the code in place that adds each `task.id` to the DOM, as well 
 
 3. Using the `taskId` as it's parameter, call the `getTaskById()` method on the `taskManager`, storing the result in a `task` variable.
 
-4. Change the `status` of the `task` to `'DONE'`.
+4. Change the `status` of the `task` to `'Done'`.
 
 5. Render the updated task by calling the `render()` method on the `taskManager`. 
 
 > #### Test Your Code!
 > Now is a good chance to test your code, open `index.html` in the browser and do the following:
 > 1. Add a task using the new task form
-> 2. Click the "Mark As Done" button on the newly created task
+> 2. Click the "Done" button on the newly created task
 >
 > **Expected Result**
 > You should see the `status` of the task update to `'DONE'` in the browser!
 
-### (OPTIONAL 1) Step 6: Stretch Goal - Hiding the "Mark As Done" Button For Completed Tasks
+### (OPTIONAL 1) Step 6: Stretch Goal - Hiding the "Done" Button For Completed Tasks
 
 > #### Useful Resources for this step
 > - [Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_ternary_operator)
 
 Stretch Goals are optional steps to attempt once your group has completed **all** previous steps. Stretch Goals require out-of-the-box thinking and do not include a step-by-step walkthrough. It's a challenge, good luck!
 
-For this Stretch Goal, we want to hide the "Mark As Done" button for Task's that are already done.
+For this Stretch Goal, we want to hide the "Done" button for Task's that are already done.
 
-In `js/taskManager.js`, in the HTML for each Task, add an `invisible` class to the "Mark As Done" button if the `status` parameter is `'TODO'`, and the `visible` class if it isn't.
+In `js/taskManager.js`, in the HTML for each Task, add an `invisible` class to the "Done" button if the `status` parameter is `'In Progress'`, and the `visible` class if it isn't.
 
 Check out [example/js/taskManager.js](example/js/taskManager.js) for a completed example!
 
@@ -180,18 +178,20 @@ Check out [example/js/taskManager.js](example/js/taskManager.js) for a completed
 
 Stretch Goals are optional steps to attempt once your group has completed **all** previous steps. Stretch Goals require out-of-the-box thinking and do not include a step-by-step walkthrough. It's a challenge, good luck!
 
-For this Stretch Goal, we want to add specific styles to our Task Status depending on whether the Status is `'DONE'` or `'TODO'`.
+For this Stretch Goal, we want to add specific styles to our Task Status depending on whether the Status is `'Done'` or `'In Progress'`.
 
-In `js/taskManager.js`, in the HTML for each Task, change the style (eg: color) of the Task Status, depending on whether the passed in `status` is equal to `'TODO'` or not.
+In `js/taskManager.js`, in the HTML for each Task, change the style (eg: color) of the Task Status, depending on whether the passed in `status` is equal to `'In Progress'` or not.
 
 Check out [example/js/taskManager.js](example/js/taskManager.js) for a completed example!
 
 ## Results
 
-Open up `index.html` and add a task. Now we should we able to click the "Mark As Done" button below each task, to change the status from "TODO" to "DONE".
-
-Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
+Open up `index.html` and add a task. Now we should we able to click the "Done" button below each task, to change the status from "In Progress" to "Done".
 
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder
+
+## Assessment
+
+This will be assessed as part of [Sprint 2](https://docs.google.com/spreadsheets/d/1X-LhsK5TaDvQZl-YS6XFxemVx3UhHdAY-vRcdR-rt9Q/edit#gid=680203692) 
