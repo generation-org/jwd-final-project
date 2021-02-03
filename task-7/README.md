@@ -6,11 +6,14 @@ For this task, we'll write the code to update a task's status to "DONE" once a "
 
 Note, for this task, we are _not_ using the "Update Task" form. This is part of the re-structuring of the project. This step will be added as a **stretch goal** to the end of the course.
 
+> #### Useful Resource for this task
+> - [Refresher on the DOM](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+
 ## Walkthrough
 
 ### Step 1: Adding the "Mark As Done" button
 
-> #### Useful Resources for this step
+> #### Useful Resource for this step
 > - [Bootstrap - Buttons](https://getbootstrap.com/docs/4.5/components/buttons/)
 
 In this step, we'll add a "Mark As Done" button to the tasks, so that a user can click the button to mark that specific task as done.
@@ -102,7 +105,7 @@ Before we do however, we'll need to make sure we add this `id` to the HTML of ea
 
 ### Step 4: Adding getTaskById to the TaskManager class
 
-> #### Useful Resources for this step
+> #### Useful Resource for this step
 > - [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 
 Now that we have our task `id` in our HTML, we need a way to use the `id` to find the correct task. In this step, we'll implement a `getTaskById` method on our `TaskManager` class to do just that. The `getTaskById` will compare a passed in `taskId` parameter to the ids of the `TaskManager` `tasks`. If it finds a matching task, it will return it from the method.
@@ -162,7 +165,7 @@ Now that we have the code in place that adds each `task.id` to the DOM, as well 
 
 ### (OPTIONAL 1) Step 6: Stretch Goal - Hiding the "Mark As Done" Button For Completed Tasks
 
-> #### Useful Resources for this step
+> #### Useful Resource for this step
 > - [Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_ternary_operator)
 
 Stretch Goals are optional steps to attempt once your group has completed **all** previous steps. Stretch Goals require out-of-the-box thinking and do not include a step-by-step walkthrough. It's a challenge, good luck!
@@ -175,7 +178,7 @@ Check out [example/js/taskManager.js](example/js/taskManager.js) for a completed
 
 ### (OPTIONAL 2) Step 7: Stretch Goal - Change the Styling of the Task Status.
 
-> #### Useful Resources for this step
+> #### Useful Resource for this step
 > - [Conditional (ternary) operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Conditional_ternary_operator)
 
 Stretch Goals are optional steps to attempt once your group has completed **all** previous steps. Stretch Goals require out-of-the-box thinking and do not include a step-by-step walkthrough. It's a challenge, good luck!
