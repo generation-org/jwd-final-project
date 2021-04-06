@@ -1,25 +1,24 @@
-// Create a TaskManager class
+// Create the TaskManager class
 class TaskManager {
-    // Set up the tasks and currentId property in the contructor
-    constructor(currentId = 0) {
-        this.tasks = [];
-        this.currentId = currentId;
-    }
+  constructor(currentId = 0) {
+    this.tasks = [];
+    this.currentId = currentId;
+  }
 
-    // Create the addTask method
-    addTask(name, description, assignedTo, dueDate) {
-        const task = {
-            // Increment the currentId property
-            id: this.currentId++,
-            name: name,
-            description: description,
-            assignedTo: assignedTo,
-            dueDate: dueDate,
-            status: 'TODO'
-        };
+  // Create the addTask method
+  addTask(name, description, assignedTo, dueDate, status) {
+    // Create a task object that we will push to the list of tasks
+    
+    const task = {
+      // Increment the current Id for each new task
+      id: this.currentId++,
+      name: name,
+      description: description,
+      assignedTo: assignedTo,
+      dueDate: dueDate,
+      status: status,
+    };
 
-        // Push the task to the tasks property
-        this.tasks.push(task);
-    }
+    this.tasks.push({ task });
+  }
 }
-

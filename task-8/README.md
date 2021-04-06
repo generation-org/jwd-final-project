@@ -2,7 +2,7 @@
 
 ## Description
 
-In this task, we'll _persist_ (ie: save) our tasks to LocalStorage, so that we can load them again the next time we visit our page.
+For this task, we'll _persist_ (ie: save) our tasks to LocalStorage, so that we can load them again the next time we visit our page.
 
 ## Walkthrough
 
@@ -64,8 +64,10 @@ Open up `index.html` and add a task. Now, when you re-visit the page (eg: close 
 
 Also, since we saved the `currentId`, any _new_ task we create should use the next `currentId`, after the one stored in `localStorage`.
 
-Your task should meet the assesment criteria in the **Final Project - Scorecard Rubric**.
-
 ## Example
 
 Stuck? Check out the provided example in the [example/](example/) folder
+
+## Assessment
+
+This will be assessed as part of [Sprint 3](https://docs.google.com/spreadsheets/d/1X-LhsK5TaDvQZl-YS6XFxemVx3UhHdAY-vRcdR-rt9Q/edit#gid=1124211828) 

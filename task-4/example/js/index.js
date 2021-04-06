@@ -1,38 +1,75 @@
+const form = document.querySelector("#new-task-form");
 
-// Select the New Task Form
-const newTaskForm = document.querySelector('#newTaskForm');
+form.addEventListener("submit", (event) => {
+  const validateName = document.querySelector("#name");
+  const validateDescription = document.querySelector("#description");
+  const validateAssignedTo = document.querySelector("#assigned-to");
+  const validateDueDate = document.querySelector("#due-date");
+  const validateStatus = document.querySelector("#status");
+  let validationFail = 0;
 
-// Add an 'onsubmit' event listener
-newTaskForm.addEventListener('submit', (event) => {
-    // Prevent default action
-    event.preventDefault();
+  event.preventDefault();
+  event.stopPropagation();
+  console.log("Task Name :" + validateName.value.length);
+  console.log("Task Description :" + validateDescription.value.length);
+  console.log("Task Assigned To :" + validateAssignedTo.value.length);
+  console.log("Task Due Date :" + validateDueDate.value);
+  console.log("Task Status:" + validateStatus.value);
 
-    // Select the inputs
-    const newTaskNameInput = document.querySelector('#newTaskNameInput');
-    const newTaskDescription = document.querySelector('#newTaskDescription');
-    const newTaskAssignedTo = document.querySelector('#newTaskAssignedTo');
-    const newTaskDueDate = document.querySelector('#newTaskDueDate');
-    const errorMessage = document.querySelector('#alertMessage');
-    
-    
-    /*
-        Validation code here
-    */
+  // Form validation for Task Name Field min length 5
+  if (validateName.value.length > 5) {
+    validateName.classList.add("is-valid");
+    validateName.classList.remove("is-invalid");
+  } else {
+    validateName.classList.add("is-invalid");
+    validateName.classList.remove("is-valid");
+    validationFail++;
+  }
 
-    // Get the values of the inputs
-    const name = newTaskNameInput.value;
-    const description = newTaskDescription.value;
-    const assignedTo = newTaskAssignedTo.value;
-    const dueDate = newTaskDueDate.value;
-    if(!validFormFieldInput(name)){
-        errorMessage.innerHTML = "Invalid name input";
-        errorMessage.style.display = "block"
-    }else{
-        errorMessage.style.display = "none"
-    }
+  // Form validation for Task Description Field min length 5
+  if (validateDescription.value.length > 5) {
+    validateDescription.classList.add("is-valid");
+    validateDescription.classList.remove("is-invalid");
+  } else {
+    validateDescription.classList.add("is-invalid");
+    validateDescription.classList.remove("is-valid");
+    validationFail++;
+  }
 
+  // Form validation for Task Assigned Field min length 5
+  if (validateAssignedTo.value.length > 5) {
+    validateAssignedTo.classList.add("is-valid");
+    validateAssignedTo.classList.remove("is-invalid");
+  } else {
+    validateAssignedTo.classList.add("is-invalid");
+    validateAssignedTo.classList.remove("is-valid");
+    validationFail++;
+  }  
+  // Form validation for Due Date Field not empty
+  // try your own validation for a date in the future
+  if (validateDueDate.value) {
+    validateDueDate.classList.add("is-valid");
+    validateDueDate.classList.remove("is-invalid");
+  } else {
+    validateDueDate.classList.add("is-invalid");
+    validateDueDate.classList.remove("is-valid");
+    validationFail++;
+  }
+  // Form validation for Task Status Field not empty
+  if (validateAssignedTo.value) {
+    validateAssignedTo.classList.add("is-valid");
+    validateAssignedTo.classList.remove("is-invalid");
+  } else {
+    validateAssignedTo.classList.add("is-invalid");
+    validateAssignedTo.classList.remove("is-valid");
+    validationFail++;
+  }
+  // If validation fails then function will not proceed further and
+  // will return. The value of validationFail will also needed to be
+  // reset to 0.
+  // ----------------------------------------------------------------------------------
+  if (validationFail > 0) {
+    validationFail = 0;
+    return;
+  }
 });
-
-function validFormFieldInput(data){
-    return data !== null && data !== '';
-}
